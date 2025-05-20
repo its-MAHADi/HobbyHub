@@ -7,6 +7,9 @@ import MyGroups from "../pages/MyGroups";
 import GroupDetails from "../pages/GroupDetails";
 import UpdateGroup from "../pages/UpdateGroup";
 import ErrorPage from "../pages/ErrorPage";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
+import AuthLayout from "../layouts/AuthLayout";
 
 export const router = createBrowserRouter([
     {
@@ -38,6 +41,20 @@ export const router = createBrowserRouter([
               path:"/update-group",
               element:<UpdateGroup></UpdateGroup>,
             },
+        ]
+    },
+    {
+        path:"/auth",
+        element:<AuthLayout></AuthLayout>,
+        children:[
+            {
+                path:"/auth/login",
+                element:<Login></Login>
+            },
+            {
+                path:"/auth/register",
+                element:<Register></Register>
+            }
         ]
     }
 ])

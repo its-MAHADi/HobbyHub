@@ -6,10 +6,21 @@ const CreateGroup = () => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
-    const hobbyData = Object.fromEntries(formData.entries())
-    console.log(hobbyData)
+    const newHobbydata = Object.fromEntries(formData.entries())
+    console.log(newHobbydata)
 
     //send hobbyData to the database
+    fetch('http://localhost:3000/hobbys',{
+        method:'POST',
+        headers:{
+            'content-type': 'application/json'
+        },
+        body:JSON.stringify(newHobbydata)
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log('after adding hobby to db',data)
+    })
  }
 
 
@@ -44,6 +55,9 @@ const CreateGroup = () => {
             <option value="Cooking">Cooking</option>
             <option value="Reading">Reading</option>
             <option value="Writing">Writing</option>
+            <option value="Hiking">Hiking</option>
+            <option value="DIY & Crafting">DIY & Crafting</option>
+            <option value="Tech & Gadgets">Tech & Gadgets</option>
           </select>
 
           <textarea

@@ -1,9 +1,10 @@
 import React from "react";
 import { Link, NavLink } from "react-router";
+import userIcon from"../assets/user.png"
 
 const Navbar = () => {
   return (
-    <div className="navbar p-0 bg-base-100 shadow-sm">
+    <div className="navbar p-0 bg-base-100 shadow-sm px-2">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="cursor-pointer mr-2 lg:hidden">
@@ -52,8 +53,9 @@ const Navbar = () => {
           <NavLink  className={({isActive})=>(isActive? "border-b-2 text-indigo-600" : "")} to="/my-groups">My Groups</NavLink>
         </div>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end gap-5">
+        <img src={userIcon} alt="" />
+        <Link to="/auth/login" className="btn">Login</Link>
       </div>
     </div>
   );
