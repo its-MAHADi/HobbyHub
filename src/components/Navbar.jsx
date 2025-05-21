@@ -66,7 +66,7 @@ const Navbar = () => {
       <div className="navbar-end gap-5">
         <img className='w-12' src={`${user ? user.photoURL :  userIcon }`} alt="" />
         {
-         user ? <button onClick={handleLogOut} className='btn'>Logout</button> :   <Link to="/auth/login" className="btn">Login</Link>
+         user ? <button onClick={handleLogOut} className='btn border border-black'>Logout</button> :   <Link to="/auth/login" className="btn">Login</Link>
         }
       </div>
     </div>
