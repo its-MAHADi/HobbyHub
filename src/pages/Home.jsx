@@ -1,10 +1,13 @@
 import React from 'react'
-import Hero from '../components/Hero'
+import { useLoaderData } from 'react-router'
+import HobbySlider from '../components/HobbySlider';
 
 const Home = () => {
+    const hobbysData = useLoaderData();
+    console.log(hobbysData)
   return (
     <div>
-      <Hero></Hero>
+      <HobbySlider hobbys={hobbysData} ></HobbySlider>
     </div>
   )
 }

@@ -1,5 +1,6 @@
 import React, { use } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const CreateGroup = () => {
 
@@ -23,7 +24,17 @@ const CreateGroup = () => {
     })
     .then(res => res.json())
     .then(data => {
-        console.log('after adding hobby to db',data)
+        // console.log('after adding hobby to db',data)
+        if (data.insertedId){
+          Swal.fire({
+        position: "top-bottom",
+        icon: "success",
+        title: "Hobby added successful!",
+        showConfirmButton: false,
+        timer: 1500
+         });
+        }
+        form.reset();
     })
  }
 
