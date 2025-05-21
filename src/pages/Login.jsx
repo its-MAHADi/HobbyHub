@@ -1,19 +1,52 @@
-import React, { useState } from 'react'
+import React, { use, useState } from 'react'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
 import { FcGoogle } from 'react-icons/fc'
-import { Link } from 'react-router'
+import { Link, useLocation, useNavigate } from 'react-router'
+import { AuthContext } from '../provider/AuthProvider'
+import toast from 'react-hot-toast'
+import Swal from 'sweetalert2'
 
 const Login = () => {
     const [showPassword,setShowPassword] = useState(false)
+
+      const { signIn}=use(AuthContext);
+
+      const locaion = useLocation();
+      const navigate = useNavigate();
+
+     const handleLogin = (e)=>{
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        // console.log({email,password})
+        signIn(email,password)
+        .then(result =>{
+            const user = result.user;
+            // toast.success('Login successful!');
+            Swal.fire({
+            title: "Login successful!",
+            icon: "success",
+            draggable: true
+          });
+            navigate(`${locaion.state?locaion.state : "/" }`)
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            toast.error('Password is incorrect Please try again.');
+          });
+    }
+
   return (
     <div className='flex justify-center py-3 min-h-screen items-center'>
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl py-5">
           <h2 className='text-center font-semibold text-2xl '>Login Your Account</h2>
-      <div className="card-body">
+      <form onSubmit={handleLogin} className="card-body">
         <fieldset className="fieldset">
             {/* email */}
           <label className="label">Email</label>
-          <input type="email" className="input" placeholder="Email" />
+          <input name='email' type="email" className="input" placeholder="Email" />
            {/* password */}
       <div className='relative'>
         <label className="label">Password</label>
@@ -27,11 +60,11 @@ const Login = () => {
               </button>
         </div>
           <div><a className="link link-hover">Forgot password?</a></div>
-          <button className="btn btn-neutral mt-4">Login</button>
+          <button type='submit' className="btn btn-neutral mt-4">Login</button>
         </fieldset>
          <button className='btn btn-outline btn-primary mt-2'> <FcGoogle size={24} /> Login with Google</button>
            <p className='font-semibold text-center pt-5'>Don't Have An Account ? <Link to="/auth/register" className='text-red-400' >Register</Link></p>
-      </div>
+      </form>
       
     </div>
     </div>

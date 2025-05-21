@@ -1,8 +1,12 @@
-import React from "react";
+import React, { use } from "react";
+import { AuthContext } from "../provider/AuthProvider";
 
 const CreateGroup = () => {
 
- const handleCreateGroup = e=> {
+ const {user} = use(AuthContext);
+ console.log(user)
+
+  const handleCreateGroup = e => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
@@ -105,17 +109,17 @@ const CreateGroup = () => {
 
           <input
             type="text"
-            name="username"
-            // value={user?.displayName}
+            name="userName"
+            value={user?.displayName}
             className="input input-bordered w-full bg-gray-100"
-            // readOnly
+            readOnly
           />
           <input
             type="email"
             name="email"
-            // value={user?.email}
+            value={user?.email}
             className="input input-bordered w-full bg-gray-100"
-            // readOnly
+            readOnly
           />
 
           <button type="submit" className="btn btn-primary w-full">
