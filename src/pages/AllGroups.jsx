@@ -1,9 +1,13 @@
 import React from 'react'
+import { useLoaderData } from 'react-router'
+import Allgrp from '../components/Allgrp';
 
 const AllGroups = () => {
+    const allData = useLoaderData();
+    console.log(allData)
   return (
     <div>
-      <h1>All Groups</h1>
+     <Allgrp></Allgrp>
     </div>
   )
 }

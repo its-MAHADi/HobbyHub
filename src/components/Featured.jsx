@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 const Featured = ({ hobbysCards}) => {
   return (
@@ -22,7 +23,7 @@ const Featured = ({ hobbysCards}) => {
         <p> <span className='font-semibold'>Start Date :</span> {hobbyCard.startDate}</p>
      </div>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary">Details</button>
+      <Link to={`/group-details/${hobbyCard._id}`} className="btn btn-primary">Details</Link>
     </div>
   </div>
 </div>

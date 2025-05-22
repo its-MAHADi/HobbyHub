@@ -5,7 +5,7 @@ import Featured from '../components/Featured';
 
 const Home = () => {
     const hobbysData = useLoaderData();
-    console.log(hobbysData)
+    // console.log(hobbysData)
   return (
     <div>
       <HobbySlider hobbys={hobbysData} ></HobbySlider>
