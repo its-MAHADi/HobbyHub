@@ -40,7 +40,7 @@ export const router = createBrowserRouter([
            {
               path:"/group-details/:id",
               element:<GroupDetails></GroupDetails>,
-               loader:()=>fetch('http://localhost:3000/hobbys'),
+               loader:()=>fetch('http://localhost:3000/all-hobbys'),
             },
             {
               path:"/update-group",

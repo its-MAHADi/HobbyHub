@@ -14,6 +14,7 @@ const CreateGroup = () => {
     const newHobbydata = Object.fromEntries(formData.entries())
     console.log(newHobbydata)
 
+  
     //send hobbyData to the database
     fetch('http://localhost:3000/hobbys',{
         method:'POST',

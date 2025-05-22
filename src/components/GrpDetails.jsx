@@ -11,7 +11,8 @@ const GrpDetails = ({group}) => {
       alt="Album" />
   </figure>
   <div className="card-body">
-    <h2 className="card-title">{group.groupName} <span className='text-[15px] text-gray-500'>( {group.hobbyCategory} )</span> </h2>
+    <h2 className="card-title">{group.groupName}</h2>
+    <h1 className='text-[15px] text-gray-500'>Group name : ( {group.hobbyCategory} )</h1> 
     <p>{group.description}</p>
      <div className='space-y-1'>
         <p> <span className='font-semibold'>Meeting Location :</span> {group.meetingLocation}</p>

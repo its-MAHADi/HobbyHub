@@ -1,13 +1,28 @@
-import React from 'react'
+import React  from 'react'
 import { useLoaderData } from 'react-router'
 import Allgrp from '../components/Allgrp';
 
 const AllGroups = () => {
     const allData = useLoaderData();
-    console.log(allData)
+    //   const {id} = useParams();
+    //   const [group ,  setGroup] = useState({});
+    //   console.log(allData)
+
+    //  useEffect(()=>{
+    //       const allGroups= allData.find((singleGroup)=>singleGroup._id ==id);
+    //       setGroup(allGroups)
+    //     },[allData ,id])
+
   return (
     <div>
-     <Allgrp></Allgrp>
+       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+        {
+            allData.map(singleGroup => <Allgrp key={singleGroup._id} singleGroup={singleGroup}></Allgrp>)
+        }
+       </div>
+       {/* <div>
+         <GrpDetails group={group}></GrpDetails>
+       </div> */}
     </div>
   )
 }
