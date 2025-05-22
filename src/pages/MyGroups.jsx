@@ -45,7 +45,7 @@ const MyGroups = () => {
       {/* Responsive horizontal scroll*/}
       <div className="overflow-x-auto">
         <table className="min-w-full border rounded-lg overflow-hidden">
-          <thead className="bg-gray-100 text-gray-700 text-sm">
+          <thead className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm">
             <tr>
               <th className="p-3 text-left">No</th>
               <th className="p-3 text-left">Image</th>

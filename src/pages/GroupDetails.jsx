@@ -15,11 +15,11 @@ const GroupDetails = () => {
     },[groupDetails ,id])
 
   return (
-    <div>
+    <div className='bg-green-100'>
      <header>
         <Navbar></Navbar>
      </header>
-      <main className='w-11/12 mx-auto'>
+      <main className='w-11/12 mx-auto py-8'>
        <GrpDetails group={group}></GrpDetails>
       </main>
     </div>

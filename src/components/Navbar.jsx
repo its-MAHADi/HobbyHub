@@ -14,7 +14,7 @@ const Navbar = () => {
     });
     }
   return (
-    <div className="navbar p-0 bg-base-100 shadow-sm px-2">
+    <div className="navbar p-0 bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-sm px-2">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="cursor-pointer mr-2 lg:hidden">
@@ -57,16 +57,16 @@ const Navbar = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <div className="flex items-center  gap-6">
-          <NavLink className={({isActive})=>(isActive? "border-b-2 text-indigo-600" : "")} to="/">Home</NavLink>
-          <NavLink  className={({isActive})=>(isActive? "border-b-2 text-indigo-600" : "")} to="/all-groups">All Groups</NavLink>
-          <NavLink  className={({isActive})=>(isActive? "border-b-2 text-indigo-600" : "")} to="/create-group">Create Group</NavLink>
-          <NavLink  className={({isActive})=>(isActive? "border-b-2 text-indigo-600" : "")} to="/my-groups">My Groups</NavLink>
+          <NavLink className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/">Home</NavLink>
+          <NavLink  className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/all-groups">All Groups</NavLink>
+          <NavLink  className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/create-group">Create Group</NavLink>
+          <NavLink  className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/my-groups">My Groups</NavLink>
         </div>
       </div>
       <div className="navbar-end gap-5">
         <img className='w-12' src={`${user ? user.photoURL :  userIcon }`} alt="" />
         {
-         user ? <button onClick={handleLogOut} className='btn border border-black'>Logout</button> :   <Link to="/auth/login" className="btn">Login</Link>
+         user ? <button onClick={handleLogOut} className='btn btn-outline text-white btn-accent border-2 border-white '>Logout</button> :   <Link to="/auth/login" className="btn btn-outline btn-accent">Login</Link>
         }
       </div>
     </div>

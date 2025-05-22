@@ -3,8 +3,8 @@ import React from 'react'
 const GrpDetails = ({group}) => {
     console.log(group)
   return (
-    <div className='my-8'>
-     <div className="card lg:card-side bg-base-100 shadow-sm py-3 px-3">
+    <div>
+     <div className="card lg:card-side bg-base-100 shadow-sm py-2 px-3">
   <figure>
     <img
       src={group.image}
