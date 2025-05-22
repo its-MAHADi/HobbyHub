@@ -21,7 +21,7 @@ const Allgrp = ({singleGroup}) => {
         <p> <span className='font-semibold'>Start Date :</span> {singleGroup.startDate}</p>
      </div>
     <div className="card-actions justify-end">
-      <Link to={`/group-details/${singleGroup._id}`} className="btn btn-primary">Details</Link>
+      <Link to={`/group-details/${singleGroup._id}`} className="btn btn-primary">See More</Link>
     </div>
   </div>
 </div>

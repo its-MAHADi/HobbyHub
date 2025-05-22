@@ -1,11 +1,14 @@
 import React, { use } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router";
 
 const CreateGroup = () => {
 
  const {user} = use(AuthContext);
  console.log(user)
+
+  const navigate = useNavigate();
 
   const handleCreateGroup = e => {
     e.preventDefault();
@@ -35,6 +38,7 @@ const CreateGroup = () => {
         timer: 1500
          });
         }
+         navigate("/my-groups")
         form.reset();
     })
  }

@@ -8,8 +8,12 @@ const auth = getAuth(app);
 
 const AuthProvider = ({children}) => {
     const [user,setUser]= useState(null);
-    // console.log(user)
+    const [loading,setLoading] = useState(true);
+
+    // console.log(user,loading)
+
     const createUser =(email,password,name,photoURL)=>{
+        setLoading(true)
      return createUserWithEmailAndPassword(auth,email,password).then(
       (result) => {
         return updateProfile(result.user, {
@@ -25,6 +29,7 @@ const AuthProvider = ({children}) => {
     }
 
     const signIn = (email,password)=>{
+        setLoading(true)
     return signInWithEmailAndPassword(auth,email,password)
    }
 
@@ -36,6 +41,7 @@ const AuthProvider = ({children}) => {
     useEffect(()=>{
    const unRegister= onAuthStateChanged(auth,(currentUser)=>{
          setUser(currentUser)
+         setLoading(false)
      });
       return ()=>{
             unRegister();
@@ -48,7 +54,9 @@ const AuthProvider = ({children}) => {
         setUser,
         createUser,
         logOut,
-        signIn
+        signIn,
+        loading,
+        setLoading
     }
   return <AuthContext value={authData}> {children} </AuthContext>
 }

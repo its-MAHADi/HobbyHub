@@ -10,12 +10,15 @@ import ErrorPage from "../pages/ErrorPage";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import AuthLayout from "../layouts/AuthLayout";
+import PrivatRoute from "../provider/PrivetRoute";
+import Loading from "../pages/Loading";
 
 export const router = createBrowserRouter([
     {
         path:"/",
         Component:MainLayouts  ,
         errorElement:<ErrorPage></ErrorPage>,
+        hydrateFallbackElement:<Loading></Loading>,
         children:[
             {
               path:"/",
@@ -29,22 +32,30 @@ export const router = createBrowserRouter([
             },
             {
               path:"/create-group",
-              element:<CreateGroup></CreateGroup>,
+              element: <PrivatRoute>
+                <CreateGroup></CreateGroup>
+              </PrivatRoute>
             },
             {
               path:"/my-groups",
-              element:<MyGroups></MyGroups>,
+              element:<PrivatRoute>
+                <MyGroups></MyGroups>
+              </PrivatRoute>
             },
         ]
     },
            {
               path:"/group-details/:id",
-              element:<GroupDetails></GroupDetails>,
+              element: <PrivatRoute>
+                <GroupDetails></GroupDetails>
+              </PrivatRoute>,
                loader:()=>fetch('http://localhost:3000/all-hobbys'),
             },
             {
               path:"/update-group",
-              element:<UpdateGroup></UpdateGroup>,
+              element:<PrivatRoute>
+                <UpdateGroup></UpdateGroup>
+              </PrivatRoute>
             },
     {
         path:"/auth",
