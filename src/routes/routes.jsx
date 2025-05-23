@@ -24,11 +24,13 @@ export const router = createBrowserRouter([
               path:"/",
               element:<Home></Home>,
               loader:()=>fetch('http://localhost:3000/hobbys'),
+              hydrateFallbackElement:<Loading></Loading>,
             },
             {
               path:"/all-groups",
               element: <AllGroups></AllGroups>,
               loader:()=>fetch('http://localhost:3000/all-hobbys'),
+              hydrateFallbackElement:<Loading></Loading>,
             },
             {
               path:"/create-group",
@@ -50,6 +52,7 @@ export const router = createBrowserRouter([
                 <GroupDetails></GroupDetails>
               </PrivatRoute>,
                loader:()=>fetch('http://localhost:3000/all-hobbys'),
+               hydrateFallbackElement:<Loading></Loading>,
             },
             {
               path:"/update-group",
