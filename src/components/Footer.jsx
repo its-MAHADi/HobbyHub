@@ -1,5 +1,6 @@
 import React from "react";
-import { FaFacebookF, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaFacebookF, FaGithub, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import { NavLink } from "react-router";
 
 const Footer = () => {
   return (
@@ -15,29 +16,25 @@ const Footer = () => {
         </div>
 
         {/* Useful Links */}
+      
         <div>
-          <h3 className="text-xl font-semibold text-white mb-3">Quick Links</h3>
-          <ul className="space-y-2 text-gray-400">
-            <li><a href="/" className="hover:text-white transition">Home</a></li>
-            <li><a href="/groups" className="hover:text-white transition">All Groups</a></li>
-            <li><a href="/createGroup" className="hover:text-white transition">Create Group</a></li>
-            <li><a href="/myGroups" className="hover:text-white transition">My Groups</a></li>
-          </ul>
+            <h3 className="text-xl text-center font-semibold text-white mb-3">Quick Links</h3>
+            <div className=" space-x-6">
+           <NavLink className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/">Home</NavLink>
+          <NavLink  className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/all-groups">All Groups</NavLink>
+          <NavLink  className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/create-group">Create Group</NavLink>
+          <NavLink  className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/my-groups">My Groups</NavLink>
+            </div>
         </div>
 
         {/* Social Media */}
         <div>
           <h3 className="text-xl font-semibold text-white mb-3">Follow Us</h3>
           <div className="flex space-x-4 text-gray-400 text-xl">
-            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-white">
-              <FaFacebookF />
-            </a>
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:text-white">
-              <FaGithub />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-white">
-              <FaLinkedin />
-            </a>
+      <a href="https://www.facebook.com/mh.mahadi.921944/" target='_blank'><FaFacebook className='text-blue-500' size={24} /></a>
+      <a href="https://github.com/its-MAHADi" target='_blank'><FaGithub size={24} /></a>
+      <a href="https://www.instagram.com/__m_a_h_a_d_i___/" target='_blank'><FaInstagram className='text-pink-500' size={24} /></a>
+      <a href=""><FaYoutube className='text-red-500' size={28} /></a>
           </div>
         </div>
       </div>

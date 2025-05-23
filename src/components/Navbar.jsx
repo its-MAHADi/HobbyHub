@@ -64,9 +64,9 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-end gap-5">
-        <img className='w-12' src={`${user ? user.photoURL :  userIcon }`} alt="" />
+        <img className='w-12 rounded rounded-full' src={`${user ? user.photoURL :  userIcon }`} alt="" />
         {
-         user ? <button onClick={handleLogOut} className='btn btn-outline text-white btn-accent border-2 border-white '>Logout</button> :   <Link to="/auth/login" className="btn btn-outline btn-accent">Login</Link>
+         user ? <button onClick={handleLogOut} className='btn btn-outline text-white btn-accent border-2 border-white '>Logout</button> :   <Link to="/auth/login" className="btn btn-outline btn-accent text-white border-2 border-white">Login</Link>
         }
       </div>
     </div>
