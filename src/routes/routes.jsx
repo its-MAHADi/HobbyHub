@@ -55,10 +55,11 @@ export const router = createBrowserRouter([
                hydrateFallbackElement:<Loading></Loading>,
             },
             {
-              path:"/update-group",
-              element:<PrivatRoute>
+              path:"/update-group/:id",
+              element: <PrivatRoute>
                 <UpdateGroup></UpdateGroup>
-              </PrivatRoute>
+              </PrivatRoute> ,
+              loader:({params})=>fetch(`http://localhost:3000/all-hobbys/${params.id}`),
             },
     {
         path:"/auth",

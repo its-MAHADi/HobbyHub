@@ -1,6 +1,7 @@
 import React, { use, useEffect, useState, } from 'react'
 import { AuthContext } from '../provider/AuthProvider';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router';
 
 const MyGroups = () => {
   const { user } = use(AuthContext);
@@ -39,13 +40,13 @@ const MyGroups = () => {
   };
 
   return (
-    <div className="w-11/12 mx-auto mt-10 bg-green-100 rounded rounded-md">
-      <h2 className="text-2xl font-bold mb-6 text-center">My Groups</h2>
+    <div className="w-11/12 mx-auto lg:mt-10 my-3 bg-green-100 rounded rounded-md">
+      {/* <h2 className="text-2xl font-bold mb-6 text-center">My Groups</h2> */}
 
       {/* Responsive horizontal scroll*/}
       <div className="overflow-x-auto">
         <table className="min-w-full border rounded-lg overflow-hidden">
-          <thead className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm">
+          <thead className="bg-gradient-to-r from-blue-500 to-orange-600 text-white text-sm">
             <tr>
               <th className="p-3 text-left">No</th>
               <th className="p-3 text-left">Image</th>
@@ -71,7 +72,7 @@ const MyGroups = () => {
                 <td className="p-3">{group.startDate}</td>
                 <td className="p-3">
                   <div className="flex flex-wrap gap-2">
-                    <button className="btn btn-sm btn-primary">Update</button>
+                    <Link to={`/update-group/${group._id}`} className="btn btn-sm btn-primary">Update</Link>
                     <button
                       className="btn btn-sm bg-red-500 text-white whitespace-nowrap"
                       onClick={() => handleDelete(group._id)}

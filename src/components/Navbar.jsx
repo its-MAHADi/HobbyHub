@@ -36,19 +36,19 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-gradient-to-r from-blue-500 to-pink-600  rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <NavLink className={({isActive})=>(isActive? "border-b-2 text-indigo-600" : "")} to="/">Home</NavLink>
+              <NavLink className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink className={({isActive})=>(isActive? "border-b-2 text-indigo-600" : "")} to="/all-groups">All Groups</NavLink>
+              <NavLink className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/all-groups">All Groups</NavLink>
             </li>
             <li>
-              <NavLink className={({isActive})=>(isActive? "border-b-2 text-indigo-600" : "")} to="/create-group">Create Group</NavLink>
+              <NavLink className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/create-group">Create Group</NavLink>
             </li>
             <li>
-              <NavLink className={({isActive})=>(isActive? "border-b-2 text-indigo-600" : "")} to="/my-groups">My Groups</NavLink>
+              <NavLink className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/my-groups">My Groups</NavLink>
             </li>
            
           </ul>
