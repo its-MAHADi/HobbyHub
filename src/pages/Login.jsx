@@ -2,18 +2,21 @@ import React, { use, useState } from 'react'
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
 import { FcGoogle } from 'react-icons/fc'
 import { Link, useLocation, useNavigate } from 'react-router'
-import { AuthContext } from '../provider/AuthProvider'
+import { auth, AuthContext } from '../provider/AuthProvider'
 import toast from 'react-hot-toast'
 import Swal from 'sweetalert2'
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 
 const Login = () => {
     const [showPassword,setShowPassword] = useState(false)
-
       const { signIn}=use(AuthContext);
+
+      const provider = new GoogleAuthProvider
 
       const locaion = useLocation();
       const navigate = useNavigate();
 
+      //Login
      const handleLogin = (e)=>{
         e.preventDefault();
         const form = e.target;
@@ -38,8 +41,25 @@ const Login = () => {
           });
     }
 
+     //google Login
     const handleGoogleLogin =()=>{
-      console.log("click hocche")
+      console.log("click hocche");
+      signInWithPopup(auth,provider)
+      .then(result =>{
+         const user = result.user;
+           // toast.success('Login successful!');
+            Swal.fire({
+            title: "Login successful!",
+            icon: "success",
+            draggable: true
+          });
+            navigate(`${locaion.state?locaion.state : "/" }`)
+      })
+      .catch(error =>{
+         const errorCode = error.code;
+         const errorMessage = error.message;
+            toast.error('Please try again.');
+      })
     }
 
   return (
