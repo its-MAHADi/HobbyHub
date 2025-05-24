@@ -45,9 +45,9 @@ const CreateGroup = () => {
 
 
   return (
-    <div className=" py-10">
+    <div className=" py-8 mt-20">
       <div className="max-w-3xl mx-auto p-6 border rounded-lg shadow-md ">
-        <h2 className="text-2xl font-semibold mb-6 text-center">
+        <h2 className="text-3xl font-bold text-blue-700 mb-6 text-center">
           Create a New Hobby Group
         </h2>
         <form onSubmit={handleCreateGroup} className="space-y-4">

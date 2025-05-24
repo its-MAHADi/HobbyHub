@@ -8,7 +8,7 @@ import { Typewriter } from 'react-simple-typewriter';
 
 const HobbySlider = ({hobbys}) => {
   return (
-     <div className="max-w-8xl w-full mx-auto">
+     <div className="max-w-8xl w-full mx-auto mt-16">
       <Swiper
         modules={[Navigation]}
         navigation

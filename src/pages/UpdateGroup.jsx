@@ -47,9 +47,9 @@ const UpdateGroup = () => {
      <div>
         <Navbar></Navbar>
      </div>
-      <div className=" py-10">
-      <div className="max-w-3xl mx-auto p-6  rounded-lg shadow-md ">
-        <h2 className="text-2xl font-semibold mb-6 text-center">
+      <div className=" py-10 mt-12">
+      <div className="max-w-3xl mx-auto p-6 border  rounded-lg shadow-md ">
+        <h2 className="text-3xl font-bold text-blue-700 mb-6 text-center">
           Update Hobby Group
         </h2>
         <form onSubmit={handleUpdateGroup} className="space-y-4">

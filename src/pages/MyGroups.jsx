@@ -40,7 +40,7 @@ const MyGroups = () => {
   };
 
   return (
-    <div className="w-11/12 mx-auto lg:mt-10 my-3 bg-green-100 rounded rounded-md">
+    <div className="w-11/12 mx-auto mt-22 my-3 bg-green-100 rounded rounded-md">
       {/* <h2 className="text-2xl font-bold mb-6 text-center">My Groups</h2> */}
 
       {/* Responsive horizontal scroll*/}

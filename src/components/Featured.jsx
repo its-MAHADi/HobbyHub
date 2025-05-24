@@ -5,9 +5,9 @@ import { Link } from 'react-router'
 const Featured = ({ hobbysCards}) => {
   return (
     <div className='my-5'>
-        <h1 className='text-3xl font-bold text-center py-5'>Featured Groups</h1>
+        <h1 className='text-4xl font-bold text-blue-700 mb-6 text-center'>Featured Groups</h1>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
-           <Fade  direction="down" ascade triggerOnce={true} duration={1200}>
+           <Fade direction="up" cascade triggerOnce={true} duration={600}>
 
               {
         hobbysCards.map((hobbyCard)=>(

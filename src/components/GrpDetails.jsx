@@ -21,7 +21,7 @@ const GrpDetails = ({ group }) => {
 
   return (
     <Fade  direction="left" ascade triggerOnce={true} duration={1000}>
-      <div className="card lg:card-side bg-base-100 shadow-sm py-2 px-3 border">
+      <div className="card lg:card-side bg-base-100 shadow-sm py-2 px-3 mt-20 border">
         <figure>
           <img src={group.image} alt="Group" />
         </figure>

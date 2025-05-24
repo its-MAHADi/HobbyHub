@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 const Allgrp = ({singleGroup}) => {
   return (
     
-        <Fade  direction="down" ascade triggerOnce={true} duration={1200} className='my-1 px-1'>
+        <Fade  direction="up" cascade triggerOnce={true} duration={800} className='mt-20 px-1'>
     
             <div className="card bg-base-100 shadow-sm">
   <figure>
