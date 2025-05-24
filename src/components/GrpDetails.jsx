@@ -3,7 +3,7 @@ import { Fade } from 'react-awesome-reveal';
 import toast from 'react-hot-toast';
 
 const GrpDetails = ({ group }) => {
-  console.log(group);
+//   console.log(group);
 
   const groupStartDate = new Date(group.startDate);
   const today = new Date();

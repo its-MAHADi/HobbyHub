@@ -64,54 +64,41 @@ const Navbar = () => {
           <NavLink  className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/my-groups">My Groups</NavLink>
         </div>
       </div>
-      {/* <div className="navbar-end gap-5  ">
-        <img className='w-12 rounded rounded-full' src={`${user ? user.photoURL :  userIcon }`} alt="" />
-
-        {
-         user ? <button onClick={handleLogOut} className='btn btn-outline text-white btn-accent border-2 border-white '>Logout</button> :   <Link to="/auth/login" className="btn btn-outline btn-accent text-white border-2 border-white">Login</Link>
-        }
-      </div> */}
-
-
-
-        <div className="navbar-end gap-3">
+    
+     <div className="navbar-end gap-3">
       {/* Avatar + Hover Tooltip */}
       <div className="relative group">
         <img
           className="w-12 h-12 rounded-full cursor-pointer border-2 border-white"
           src={user?.photoURL || userIcon}
-          alt="User"
-        />
+          alt="User" />
+       
 
         {/* Hover Box */}
         {user && (
           <div className="absolute  transform -translate-x-4/15
-                          bg-black text-white text-sm rounded-lg px-4 py-2 
-                          opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                          whitespace-nowrap z-10 shadow-xl text-center w-max">
+             bg-black text-white text-sm rounded-lg px-4 py-2 
+             opacity-0 group-hover:opacity-100 transition-opacity duration-300
+             whitespace-nowrap z-10 shadow-xl text-center w-max">
             <p className="mb-2 font-semibold">{user.displayName || "User"}</p>
             <button
               onClick={handleLogOut}
-              className="bg-red-500 hover:bg-red-600 text-xs text-white px-3 py-1 rounded cursor-pointer"
-            >
+              className="bg-red-500 hover:bg-red-600 text-xs text-white px-3 py-1 rounded cursor-pointer" > 
               Logout
             </button>
           </div>
         )}
       </div>
-
+        {/* Theme */}
       {
         user?  <ThemeToggle></ThemeToggle> : <button className="hidden"></button>
       }
-
-    
+          {/* Login/Logot */}
         {
          user ? <button onClick={handleLogOut} className='btn btn-outline text-white btn-accent border-2 border-white hidden  '>Logout</button> :   <Link to="/auth/login" className="btn btn-outline btn-accent text-white border-2 border-white">Login</Link>
         }
 
     </div>
-
-
 
 
     </div>

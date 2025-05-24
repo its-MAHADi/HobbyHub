@@ -8,7 +8,6 @@ const ErrorPage = () => {
       <div>
       <img className='w-[400px] rounded-xl shadow-xl' src={error} alt="" />
      <div className='text-center space-y-4 mt-5'>
-     {/* <h1 className='text-red-500 text-4xl font-semibold'>404-Page Not Found</h1> */}
       <p className='text-red-500 text-xl font-semibold'>Oops! The Page you're looking for doesn't exist</p>
       <Link to="/" className='btn bg-blue-500 text-white'>Go back Home</Link>
      </div>

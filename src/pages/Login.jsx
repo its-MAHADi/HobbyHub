@@ -86,7 +86,6 @@ const Login = () => {
           <div><a className="link link-hover">Forgot password?</a></div>
           <button type='submit' className="btn btn-neutral mt-4">Login</button>
         </fieldset>
-         {/* <button className='btn btn-outline btn-primary mt-2'> <FcGoogle size={24} /> Login with Google</button> */}
 
          {/* Google */}
         <button onClick={handleGoogleLogin} className="btn bg-white text-black border-[#e5e5e5]">
