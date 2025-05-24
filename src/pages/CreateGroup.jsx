@@ -19,7 +19,7 @@ const CreateGroup = () => {
 
   
     //send hobbyData to the database
-    fetch('http://localhost:3000/hobbys',{
+    fetch('https://hobby-hub-server-zeta.vercel.app/hobbys',{
         method:'POST',
         headers:{
             'content-type': 'application/json'

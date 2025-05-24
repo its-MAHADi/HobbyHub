@@ -23,13 +23,13 @@ export const router = createBrowserRouter([
             {
               path:"/",
               element:<Home></Home>,
-              loader:()=>fetch('http://localhost:3000/hobbys'),
+              loader:()=>fetch('https://hobby-hub-server-zeta.vercel.app/hobbys'),
               hydrateFallbackElement:<Loading></Loading>,
             },
             {
               path:"/all-groups",
               element: <AllGroups></AllGroups>,
-              loader:()=>fetch('http://localhost:3000/all-hobbys'),
+              loader:()=>fetch('https://hobby-hub-server-zeta.vercel.app/all-hobbys'),
               hydrateFallbackElement:<Loading></Loading>,
             },
             {
@@ -51,7 +51,7 @@ export const router = createBrowserRouter([
               element: <PrivatRoute>
                 <GroupDetails></GroupDetails>
               </PrivatRoute>,
-               loader:()=>fetch('http://localhost:3000/all-hobbys'),
+               loader:()=>fetch('https://hobby-hub-server-zeta.vercel.app/all-hobbys'),
                hydrateFallbackElement:<Loading></Loading>,
             },
             {
@@ -59,7 +59,7 @@ export const router = createBrowserRouter([
               element: <PrivatRoute>
                 <UpdateGroup></UpdateGroup>
               </PrivatRoute> ,
-              loader:({params})=>fetch(`http://localhost:3000/all-hobbys/${params.id}`),
+              loader:({params})=>fetch(`https://hobby-hub-server-zeta.vercel.app/all-hobbys/${params.id}`),
             },
     {
         path:"/auth",

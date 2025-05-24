@@ -17,7 +17,7 @@ const UpdateGroup = () => {
     const updatedGroup = Object.fromEntries(formData.entries());
 
     //send updated group to the db
-    fetch(`http://localhost:3000/all-hobbys/${_id}`,{
+    fetch(`https://hobby-hub-server-zeta.vercel.app/all-hobbys/${_id}`,{
         method:'PUT',
         headers:{
             'content-type' : 'application/json'

@@ -11,7 +11,7 @@ const HobbyCommunity = () => {
           <h2 className="text-4xl font-bold text-blue-700 mb-6">Our Thriving Community</h2>
           <p className=" mb-12">We’re proud of the amazing people and energy within HobbyHub</p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  gap-10 text-center">
             <div className="flex flex-col items-center">
               <Users className="text-purple-600 mb-2" size={40} />
               <h3 className="text-3xl font-bold text-blue-800">
