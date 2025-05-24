@@ -11,7 +11,7 @@ const Allgrp = ({singleGroup}) => {
   <figure>
     <img
       src={singleGroup.image}
-      alt="Shoes" />
+      alt="image" />
   </figure>
   <div className="card-body">
     <h2 className="card-title">{singleGroup.groupName}</h2>

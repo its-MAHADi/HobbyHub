@@ -11,7 +11,7 @@ const Featured = ({ hobbysCards}) => {
 
               {
         hobbysCards.map((hobbyCard)=>(
-            <div className="card bg-base-100 shadow-sm">
+            <div key={hobbyCard._id} className="card bg-base-100 shadow-sm">
   <figure>
     <img
       src={hobbyCard.image}

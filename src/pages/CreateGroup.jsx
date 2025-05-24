@@ -6,7 +6,7 @@ import { useNavigate } from "react-router";
 const CreateGroup = () => {
 
  const {user} = use(AuthContext);
- console.log(user)
+ //console.log(user)
 
   const navigate = useNavigate();
 
@@ -15,7 +15,7 @@ const CreateGroup = () => {
     const form = e.target;
     const formData = new FormData(form);
     const newHobbydata = Object.fromEntries(formData.entries())
-    console.log(newHobbydata)
+    //console.log(newHobbydata)
 
   
     //send hobbyData to the database
