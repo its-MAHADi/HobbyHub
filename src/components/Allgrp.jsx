@@ -1,10 +1,11 @@
 import React from 'react'
+import { Fade } from 'react-awesome-reveal'
 import { Link } from 'react-router'
 
 const Allgrp = ({singleGroup}) => {
   return (
     
-        <div className='my-1 px-1'>
+        <Fade  direction="down" ascade triggerOnce={true} duration={1200} className='my-1 px-1'>
     
             <div className="card bg-base-100 shadow-sm">
   <figure>
@@ -26,7 +27,7 @@ const Allgrp = ({singleGroup}) => {
   </div>
 </div>
       
-        </div>
+        </Fade>
   
   )
 }

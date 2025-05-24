@@ -24,7 +24,7 @@ const MyGroups = () => {
       confirmButtonText: 'Yes, delete it!',
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/all-hobbys/${id}`, {
+        fetch(`http://localhost:3000/all-hobbys/${id}`,{
           method: 'DELETE',
         })
           .then(res => res.json())
@@ -72,7 +72,8 @@ const MyGroups = () => {
                 <td className="p-3">{group.startDate}</td>
                 <td className="p-3">
                   <div className="flex flex-wrap gap-2">
-                    <Link to={`/update-group/${group._id}`} className="btn btn-sm btn-primary">Update</Link>
+                      <Link to={`/group-details/${group._id}`} className="btn btn-sm btn-primary">Details</Link>
+                    <Link to={`/update-group/${group._id}`} className="btn btn-sm btn-success">Update</Link>
                     <button
                       className="btn btn-sm bg-red-500 text-white whitespace-nowrap"
                       onClick={() => handleDelete(group._id)}

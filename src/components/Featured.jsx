@@ -1,4 +1,5 @@
 import React from 'react'
+import { Fade } from 'react-awesome-reveal'
 import { Link } from 'react-router'
 
 const Featured = ({ hobbysCards}) => {
@@ -6,6 +7,8 @@ const Featured = ({ hobbysCards}) => {
     <div className='my-5'>
         <h1 className='text-3xl font-bold text-center py-5'>Featured Groups</h1>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
+           <Fade  direction="down" ascade triggerOnce={true} duration={1200}>
+
               {
         hobbysCards.map((hobbyCard)=>(
             <div className="card bg-base-100 shadow-sm">
@@ -29,6 +32,8 @@ const Featured = ({ hobbysCards}) => {
 </div>
         ))
       }
+
+           </Fade>
         </div>
     </div>
   )

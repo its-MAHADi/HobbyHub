@@ -45,8 +45,8 @@ const CreateGroup = () => {
 
 
   return (
-    <div className="bg-green-100 py-10">
-      <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md ">
+    <div className=" py-10">
+      <div className="max-w-3xl mx-auto p-6 border rounded-lg shadow-md ">
         <h2 className="text-2xl font-semibold mb-6 text-center">
           Create a New Hobby Group
         </h2>
@@ -127,14 +127,14 @@ const CreateGroup = () => {
             type="text"
             name="userName"
             value={user?.displayName}
-            className="input input-bordered w-full bg-gray-100"
+            className="input input-bordered w-full bg-gray-100 text-black"
             readOnly
           />
           <input
             type="email"
             name="email"
             value={user?.email}
-            className="input input-bordered w-full bg-gray-100"
+            className="input input-bordered w-full bg-gray-100 text-black"
             readOnly
           />
 

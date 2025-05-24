@@ -15,7 +15,7 @@ const GroupDetails = () => {
     },[groupDetails ,id])
 
   return (
-    <div className='bg-green-100'>
+    <div className=''>
      <header>
         <Navbar></Navbar>
      </header>
