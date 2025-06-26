@@ -1,12 +1,38 @@
-# React + Vite
+# 🎨 HobbyHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **HobbyHub**, a vibrant platform where hobbyists can connect, create, and collaborate! Whether it's painting, coding, hiking, or gaming — this is the place to build hobby groups and grow communities.
 
-Currently, two official plugins are available:
+🔗 **Live Site:** [https://hobbyhub-project.web.app/](https://hobbyhub-project.web.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔐 Firebase Authentication (Google, Email/Password)
+- 📝 Create, View, and Update Hobby Groups
+- 👥 Join and View Group Details
+- 💬 Comment system for blogs
+- ❤️ Wishlist feature for favorite blogs
+- 🔎 Blog filtering by category and keyword search
+- 📊 Dashboard with stats and animations
+- 🔒 Protected Routes and Role-based Access
+- 🎉 Interactive UI with animations & tooltips
+
+---
+
+## 🛠️ Technologies Used
+
+- **React.js**
+- **React Router DOM**
+- **Firebase Authentication**
+- **MongoDB** + **Express.js** (Backend)
+- **Tailwind CSS** + **DaisyUI**
+- **Axios**
+- **SweetAlert2**
+- **React Icons**
+- **React Awesome Reveal**
+- **React CountUp**
+- **Lottie React**  
+- **React Simple Typewriter**
+
+---
