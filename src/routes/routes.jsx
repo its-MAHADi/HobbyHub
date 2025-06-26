@@ -12,6 +12,8 @@ import Register from "../pages/Register";
 import AuthLayout from "../layouts/AuthLayout";
 import PrivatRoute from "../provider/PrivetRoute";
 import Loading from "../pages/Loading";
+import Dashboard from "../layouts/Dashboard";
+import DashboardHome from "../pages/DashboardHome";
 
 export const router = createBrowserRouter([
     {
@@ -45,6 +47,19 @@ export const router = createBrowserRouter([
               </PrivatRoute>
             },
         ]
+    },
+    {
+      path:"/dashboard",
+      Component:Dashboard,
+      hydrateFallbackElement:<Loading></Loading>,
+      children:[
+        {
+          path:"/dashboard",
+          element:<PrivatRoute>
+            <DashboardHome></DashboardHome>
+          </PrivatRoute> ,
+        }
+      ]
     },
            {
               path:"/group-details/:id",

@@ -51,8 +51,16 @@ const Navbar = () => {
             <li>
               <NavLink className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/my-groups">My Groups</NavLink>
             </li>
-           
+            <li>
+              <NavLink className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/dashboard">Dashboard</NavLink>
+            </li>
+             <button
+              onClick={handleLogOut}
+              className="bg-red-500 hover:bg-red-600 text-xs text-white px-3 py-1 rounded cursor-pointer" > 
+              Logout
+            </button>
           </ul>
+          
         </div>
         <Link to="/" className="font-bold text-xl"> HobbyHub</Link>
       </div>
@@ -60,8 +68,9 @@ const Navbar = () => {
         <div className="flex items-center  gap-6">
           <NavLink className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/">Home</NavLink>
           <NavLink  className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/all-groups">All Groups</NavLink>
-          <NavLink  className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/create-group">Create Group</NavLink>
+          <NavLink  className={({isActive})=>(isActive? "border-b-2 text-white " : "")} to="/create-group">Create Group</NavLink>
           <NavLink  className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/my-groups">My Groups</NavLink>
+          <NavLink  className={({isActive})=>(isActive? "border-b-2 text-white" : "")} to="/dashboard">Dashboard</NavLink>
         </div>
       </div>
     
